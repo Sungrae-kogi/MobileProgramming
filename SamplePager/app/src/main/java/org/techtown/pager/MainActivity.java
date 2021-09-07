@@ -1,6 +1,7 @@
 package org.techtown.pager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import android.os.Bundle;
@@ -13,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    class MyPagerAdapter extends FragmentStatePagerAdapter {
+    class MyPagerAdapter extends FragmentPagerAdapter {
         ArrayList<Fragment> items = new ArrayList<Fragment>();
         public MyPagerAdapter(FragmentManager fm){
             super(fm);
