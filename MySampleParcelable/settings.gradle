@@ -1,0 +1,2 @@
+rootProject.name = "MySampleParcelable"
+include ':app'
