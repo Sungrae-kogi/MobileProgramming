@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="이미지 바꾸기"
+        android:onClick="onButton1Clicked"/>
+
+    <!--visible 속성이 있는데 프레임 레이아웃의 특성상 나중에 들어온게 먼저들어온 거 위에
+        차례차례 쌓이는 식이라서, 속성지정하지않으면 맨 마지막께 보일것이다-->
+    <!--설정한 Button의 onClick 메소드를 정의해서 버튼을 누를때마다 visible 속성을 조절하면 화면전환효과    -->
+    <FrameLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp">
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_launcher_background"
+            />
+        <ImageView
+            android:id="@+id/imageview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            />
+    </FrameLayout>
+
+
+</LinearLayout>
