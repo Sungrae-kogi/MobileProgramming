@@ -1,10 +1,11 @@
 package org.techtown.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,11 +14,12 @@ public class MainActivity extends AppCompatActivity {
 
     int imageIndex =0;
 
-
+    Button button1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         imageView = findViewById(R.id.imageview);
         imageView2 = findViewById(R.id.imageview2);
