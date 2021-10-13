@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    MainFragment mainFragment;
+    MenuFragment menuFragment;
     Button btn1,btn2,btn3,btn4;
 
     @Override
@@ -60,5 +62,20 @@ public class MainActivity extends AppCompatActivity {
                 transaction.commit();
             }
         });
+
+        mainFragment = (MainFragment) getSupportFragmentManager().findFragmentById(R.id.mainFragment);
+        menuFragment = new MenuFragment();
+
+
+    }
+
+    public void onFragmentChanged(int index){
+
+        if(index==0){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,menuFragment).commit();
+        }else if(index==1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container,mainFragment).commit();
+        }
+
     }
 }
